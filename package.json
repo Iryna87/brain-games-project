@@ -1,30 +1,27 @@
 {
-  "name": "frontend-project-lvl1",
-  "type": "module",
+  "name": "FrontEndProject_1",
   "version": "1.0.0",
   "description": "my first project",
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
   "main": "index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Iryna87/frontend-project-lvl1.git"
+    "url": "git+https://github.com/Iryna87/FrontEndProject_1"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Iryna87/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/Iryna87/frontend-project-lvl1#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/core": "^7.10.4",
-    "@babel/node": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "readline-sync": "^1.4.10"
-  }
+  "homepage": "https://github.com/Iryna87/frontend-project-lvl1#readme"
 }
