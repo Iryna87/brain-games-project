@@ -8,10 +8,5 @@ module.exports = {
         safari: '11.1',
       },
     }],
-    ['@babel/cli', {
-      targets: {
-        node: 'current',
-      },
-    }],
   ],
 };
