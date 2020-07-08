@@ -3,6 +3,8 @@
 plugins:
   - eslint-plugin-import
 
+modules: true
+
 env:
   node: true
 
