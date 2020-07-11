@@ -104,70 +104,58 @@ export const functionD = (min, max) => {
     let rundomNumber2 = randomNumberRange(1, 100);
 
     a = `${rundomNumber1} ${rundomNumber2}`;
-    
-    return a;
 
-};
-
-export const coll = () => {
-
-    let question = `Question: ${functionD()}`;
+    let question = `Question: ${a}`;
 
     console.log(question);
 
-    let b = Array(question.split().slice(-2));
+    let b = [];
+    
+    let bais = b.push(rundomNumber1, rundomNumber2);
 
-    return b;
-}
- 
-export const nod = () => {
-        
-    let result = [];
-
-    let result1 = coll();
-    //console.log(result1);
+    let result = '';
     
     for (let i = 1; i <= 200; i += 1) {
-        if (result1[0] % i === 0 && result1[1] % i === 0) {
+        if (b[0] % i === 0 && b[1] % i === 0) {
         result = i;
+        //console.log(result);
         }
     }
-    //console.log(result);
-    return Number(result);    
-  };
+    return Number(result); 
+
+};
+ 
 
 export const functionC = () => {
 
+    let res = functionD();
+
     const answer = readlineSync.question('Yor answer: ');
     
-        if (Number(answer) !== nod()) {
-            const echo = `'${answer}' is wrong answer ;(. Correct answer was '${nod()}'.\nLet\'s try again, ${name}!`;
+        if (Number(answer) !== res) {
+            const echo = `'${answer}' is wrong answer ;(. Correct answer was '${res}'.\nLet\'s try again, ${name}!`;
             console.log (echo);
     
         } else {
             console.log('Correct!');
 
-            functionD();
-
-            nod();
+            let res = functionD();
 
             const answer1 = readlineSync.question('Yor answer: ');
         
-                if (Number(answer1) !== nod()) {
-                    const echo = `'${answer1}' is wrong answer ;(. Correct answer was '${nod()}'.\nLet\'s try again, ${name}!`;
+                if (Number(answer1) !== res) {
+                    const echo = `'${answer1}' is wrong answer ;(. Correct answer was '${res}'.\nLet\'s try again, ${name}!`;
                     console.log (echo);
     
                 } else {
                     console.log('Correct!');
 
-                    functionD();
-
-                    nod();
+                    let res = functionD();
 
                     const answer2 = readlineSync.question('Yor answer: ');
     
-                        if (Number(answer2) !== nod()) {
-                            const echo = `'${answer2}' is wrong answer ;(. Correct answer was '${nod()}'.\nLet\'s try again, ${name}!`;
+                        if (Number(answer2) !== res) {
+                            const echo = `'${answer2}' is wrong answer ;(. Correct answer was '${res}'.\nLet\'s try again, ${name}!`;
                             console.log (echo);
                         } else {
                             console.log('Correct!');
