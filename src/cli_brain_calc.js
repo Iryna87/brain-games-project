@@ -1,7 +1,12 @@
 // give2.js
 
-import { greetings, functionA } from './index.js';
+import * as func from './index.js';
 
-greetings();
+func.nameF();
 
-functionA();
+console.log ('What is the result of the expression?');
+
+func.functionB();
+
+func.functionA();
+

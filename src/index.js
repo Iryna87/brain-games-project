@@ -2,42 +2,41 @@
 
 import readlineSync from 'readline-sync';
 
+export const name = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
 
-
-const greetings = () => console.log('Welcome to the Brain Games!');
-  
-
-const functionA = () => {
-    const randomNumberRange = (min, max) => {
-    return Math.floor(Math.random() * (max - min) + min);
-    };
-
-    const name = readlineSync.question('May I have your name? ');
+export const nameF  = () => {
     
     const str = `Hello, ${name}!`;
 
     console.log(str);
 
-    console.log ('What is the result of the expression?');
+};
 
-    const functionB = () => {
-        let a = '';
-
-        const x = ['*','-','+'];
-
-        let rundomNumber1 = randomNumberRange(1, 100);
-
-        let rundomNumber2 = randomNumberRange(1, 100);
-
-        let expressionSign= randomNumberRange(0, x.length);
-
-        let expressionSignRundom = x[expressionSign];
-
-        a = `${rundomNumber1} ${expressionSignRundom} ${rundomNumber2}`;
-
-        return a;
-        
+export const functionB = () => {
+    const randomNumberRange = (min, max) => {
+        return Math.floor(Math.random() * (max - min) + min);
     };
+
+    let a = '';
+
+    const x = ['*','-','+'];
+
+    let rundomNumber1 = randomNumberRange(1, 100);
+
+    let rundomNumber2 = randomNumberRange(1, 100);
+
+    let expressionSign= randomNumberRange(0, x.length);
+
+    let expressionSignRundom = x[expressionSign];
+
+    a = `${rundomNumber1} ${expressionSignRundom} ${rundomNumber2}`;
+
+    return a;
+    
+};
+
+
+export const functionA = () => {
     
     let aaa = functionB();
 
@@ -94,6 +93,91 @@ const functionA = () => {
 };
 
 
+export const functionD = (min, max) => {
+    const randomNumberRange = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+    };
+    let a = '';
 
+    let rundomNumber1 = randomNumberRange(1, 100);
 
-export { greetings, functionA };
+    let rundomNumber2 = randomNumberRange(1, 100);
+
+    a = `${rundomNumber1} ${rundomNumber2}`;
+    
+    return a;
+
+};
+
+export const coll = () => {
+
+    let question = `Question: ${functionD()}`;
+
+    console.log(question);
+
+    let b = Array(question.split().slice(-2));
+
+    return b;
+}
+ 
+export const nod = () => {
+        
+    let result = [];
+
+    let result1 = coll();
+    //console.log(result1);
+    
+    for (let i = 1; i <= 200; i += 1) {
+        if (result1[0] % i === 0 && result1[1] % i === 0) {
+        result = i;
+        }
+    }
+    //console.log(result);
+    return Number(result);    
+  };
+
+export const functionC = () => {
+
+    const answer = readlineSync.question('Yor answer: ');
+    
+        if (Number(answer) !== nod()) {
+            const echo = `'${answer}' is wrong answer ;(. Correct answer was '${nod()}'.\nLet\'s try again, ${name}!`;
+            console.log (echo);
+    
+        } else {
+            console.log('Correct!');
+
+            functionD();
+
+            nod();
+
+            const answer1 = readlineSync.question('Yor answer: ');
+        
+                if (Number(answer1) !== nod()) {
+                    const echo = `'${answer1}' is wrong answer ;(. Correct answer was '${nod()}'.\nLet\'s try again, ${name}!`;
+                    console.log (echo);
+    
+                } else {
+                    console.log('Correct!');
+
+                    functionD();
+
+                    nod();
+
+                    const answer2 = readlineSync.question('Yor answer: ');
+    
+                        if (Number(answer2) !== nod()) {
+                            const echo = `'${answer2}' is wrong answer ;(. Correct answer was '${nod()}'.\nLet\'s try again, ${name}!`;
+                            console.log (echo);
+                        } else {
+                            console.log('Correct!');
+
+                            const end = `Congratulations, ${name}!`;
+                            
+                            console.log(end);
+                        }
+                }
+    
+         }
+
+};
