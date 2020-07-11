@@ -6,7 +6,5 @@ func.nameF();
 
 console.log ('What is the result of the expression?');
 
-func.functionB();
-
 func.functionA();
 

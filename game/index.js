@@ -1,4 +1,4 @@
-// give3.js
+// give_index.js
 
 import readlineSync from 'readline-sync';
 
@@ -31,6 +31,10 @@ export const functionB = () => {
 
     a = `${rundomNumber1} ${expressionSignRundom} ${rundomNumber2}`;
 
+    let question = `Question: ${a}`;
+
+    console.log(question);
+
     return a;
     
 };
@@ -39,10 +43,6 @@ export const functionB = () => {
 export const functionA = () => {
     
     let aaa = functionB();
-
-    let question = `Question: ${aaa}`;
-
-    console.log(question);
 
     const answer = readlineSync.question('Yor answer: ');
     
@@ -55,10 +55,6 @@ export const functionA = () => {
 
             let aaa = functionB();
 
-            let question = `Question: ${aaa}`;
-
-            console.log(question);
-
             const answer1 = readlineSync.question('Yor answer: ');
         
                 if (Number(answer1) !== eval(aaa)) {
@@ -69,10 +65,6 @@ export const functionA = () => {
                     console.log('Correct!');
 
                     let aaa = functionB();
-
-                    let question = `Question: ${aaa}`;
-
-                    console.log(question);
 
                     const answer2 = readlineSync.question('Yor answer: ');
     
@@ -156,6 +148,95 @@ export const functionC = () => {
     
                         if (Number(answer2) !== res) {
                             const echo = `'${answer2}' is wrong answer ;(. Correct answer was '${res}'.\nLet\'s try again, ${name}!`;
+                            console.log (echo);
+                        } else {
+                            console.log('Correct!');
+
+                            const end = `Congratulations, ${name}!`;
+                            
+                            console.log(end);
+                        }
+                }
+    
+         }
+
+};
+
+
+
+export const functionF = (min, max) => {
+    const randomNumberRange = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+    };
+
+    let a = randomNumberRange(1, 11);
+    //console.log(a);
+
+    let b = randomNumberRange(1, 90);
+
+    let c = randomNumberRange(0, 10);
+
+    let result = [b + a];
+
+    for (let i = 1; i < 10; i += 1) {
+        result[i] = result[i - 1] + a;
+      };
+
+    let res = result.splice(c, 1, '..');
+
+    let question = `Question: ${result}`;
+
+    console.log(question);
+
+    let ccc = 0;
+
+    //console.log(result);
+    //console.log(c);
+
+    if (c === 0) {
+        ccc = result[c + 1] - a; 
+    } if (c === 9) {
+        ccc = result[c - 1] + a;
+    } else {
+        ccc = result[c + 1] - a;
+    }
+
+    //console.log(ccc);
+    return ccc;
+
+};
+ 
+
+export const functionE = () => {
+
+    let bbb = functionF();
+
+    const answer = readlineSync.question('Yor answer: ');
+    
+        if (Number(answer) !== bbb) {
+            const echo = `'${answer}' is wrong answer ;(. Correct answer was '${bbb}'.\nLet\'s try again, ${name}!`;
+            console.log (echo);
+    
+        } else {
+            console.log('Correct!');
+
+            let bbb = functionF();
+
+            const answer1 = readlineSync.question('Yor answer: ');
+        
+                if (Number(answer1) !== bbb) {
+                    const echo = `'${answer1}' is wrong answer ;(. Correct answer was '${bbb}'.\nLet\'s try again, ${name}!`;
+                    console.log (echo);
+    
+                } else {
+                    console.log('Correct!');
+
+                    let bbb = functionF();
+
+                    const answer2 = readlineSync.question('Yor answer: ');
+    
+                        if (Number(answer2) !== bbb) {
+                            const echo = `'${answer2}' is wrong answer ;(. Correct answer was '${bbb}'.\nLet\'s try again, ${name}!`;
                             console.log (echo);
                         } else {
                             console.log('Correct!');
