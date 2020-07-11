@@ -184,7 +184,12 @@ export const functionF = (min, max) => {
 
     let res = result.splice(c, 1, '..');
 
-    let question = `Question: ${result}`;
+    let res1 = String(result);
+    
+    let res2 = res1.replace(/[,]/g, ' ');
+    //console.log(res2);
+  
+    let question = `Question: ${res2}`;
 
     console.log(question);
 
