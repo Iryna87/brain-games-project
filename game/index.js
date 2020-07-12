@@ -9,6 +9,8 @@ export const nameF  = () => {
     console.log(str);
 };
 
+
+
 export const functionB = () => {
     const randomNumberRange = (min, max) => {
         return Math.floor(Math.random() * (max - min) + min);
@@ -25,7 +27,6 @@ export const functionB = () => {
     let question = `Question: ${a}`;
     console.log(question);
     return a;
-    
 };
 
 
