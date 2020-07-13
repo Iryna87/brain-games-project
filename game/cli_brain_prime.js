@@ -2,9 +2,13 @@
 
 import * as func from './index.js';
 
-func.nameF();
+export const brainPrime = () => {
 
-console.log ('Answer "yes" if given number is prime. Otherwise answer "no".');
+    func.nameF();
 
-func.functionH();
+    console.log ('Answer "yes" if given number is prime. Otherwise answer "no".');
+
+    func.functionH();
+
+};   
 

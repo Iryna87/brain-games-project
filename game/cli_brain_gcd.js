@@ -2,9 +2,13 @@
 
 import * as func from './index.js';
 
-func.nameF();
+export const brainGcd = () => {
 
-console.log ('Find the greatest common divisor of given numbers.');
+    func.nameF();
 
-func.functionC();
+    console.log ('Find the greatest common divisor of given numbers.');
+
+    func.functionC();
+
+};
 

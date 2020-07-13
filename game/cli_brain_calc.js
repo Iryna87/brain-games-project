@@ -2,9 +2,13 @@
 
 import * as func from './index.js';
 
-func.nameF();
+export const brainCalc = () => {
+    
+    func.nameF();
 
-console.log ('What is the result of the expression?');
+    console.log ('What is the result of the expression?');
 
-func.functionA();
+    func.functionA();
+
+}; 
 

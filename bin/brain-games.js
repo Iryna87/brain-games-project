@@ -1,4 +1,6 @@
 #!/usr/bin/env node
 
-import * as cli from '../game/cli.js';
+import * as games from '../game/cli.js';
+
+games.brainGames();
  

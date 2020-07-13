@@ -2,9 +2,13 @@
 
 import * as func from './index.js';
 
-func.nameF();
+export const brainProgression = () => {
 
-console.log ('What number is missing in the progression?');
+    func.nameF();
 
-func.functionE();
+    console.log ('What number is missing in the progression?');
+
+    func.functionE();
+
+};
 

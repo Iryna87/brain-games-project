@@ -2,27 +2,29 @@
 
 import readlineSync from 'readline-sync';
 
-console.log('Welcome to the Brain Games!');
+export const brainEven = () => {
 
-const name = readlineSync.question('May I have your name? ');
+    console.log('Welcome to the Brain Games!');
 
-const str = `Hello, ${name}!`;
+    const name = readlineSync.question('May I have your name? ');
 
-console.log(str);
+    const str = `Hello, ${name}!`;
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    console.log(str);
 
-console.log('Question: 15');
+    console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-const name1 = readlineSync.question('Your answer: ');
+    console.log('Question: 15');
 
-if (name1 !== 'no') {
+    const name1 = readlineSync.question('Your answer: ');
+
+    if (name1 !== 'no') {
     const str1 = `${name1} is wrong answer ;(. Correct answer was "no". Let\'s try again, ${name}!`;
     console.log(str1);
-} else {
-   console.log('Correct!');
-   console.log('Question: 6');
-   const name2 = readlineSync.question('Your answer: ');
+    } else {
+        console.log('Correct!');
+        console.log('Question: 6');
+        const name2 = readlineSync.question('Your answer: ');
     if (name2 !== 'yes') {
         const str3 = `${name2} is wrong answer ;(. Correct answer was "yes". Let\'s try again, ${name}!`;
         console.log(str3);
@@ -38,6 +40,6 @@ if (name1 !== 'no') {
                 console.log('Correct!');
                 console.log(str5);
             }
+        }
     }
-
-}
+};

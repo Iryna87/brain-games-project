@@ -1,10 +1,14 @@
 // give.js
 import readlineSync from 'readline-sync';
 
-console.log('Welcome to the Brain Games!');
+export const brainGames = () => {
 
-const name = readlineSync.question('May I have your name? ');
+    console.log('Welcome to the Brain Games!');
 
-const str = `Hello, ${name}!`;
+    const name = readlineSync.question('May I have your name? ');
 
-console.log(str);
+    const str = `Hello, ${name}!`;
+
+    console.log(str);
+
+};  
