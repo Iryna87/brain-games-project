@@ -31,40 +31,30 @@ export const functionB = () => {
 
 
 export const functionA = () => {
-    let aaa = functionB();
-    const answer = readlineSync.question('Your answer: ');
-    
+    let i = 0;
+  
+    const func = () => {
+  
+      let aaa = functionB();
+      const answer = readlineSync.question('Your answer: ');
         if (Number(answer) !== eval(aaa)) {
-            const echo = `'${answer}' is wrong answer ;(. Correct answer was '${eval(aaa)}'.\nLet\'s try again, ${name}!`;
-            console.log (echo);
-    
+          const echo = `'${answer}' is wrong answer ;(. Correct answer was '${eval(aaa)}'.\nLet\'s try again, ${name}!`;
+          console.log (echo);
         } else {
-            console.log('Correct!');
-            let aaa = functionB();
-            const answer1 = readlineSync.question('Your answer: ');
-        
-                if (Number(answer1) !== eval(aaa)) {
-                    const echo = `'${answer1}' is wrong answer ;(. Correct answer was '${eval(aaa)}'.\nLet\'s try again, ${name}!`;
-                    console.log (echo);
-    
-                } else {
-                    console.log('Correct!');
-                    let aaa = functionB();
-                    const answer2 = readlineSync.question('Your answer: ');
-    
-                        if (Number(answer2) !== eval(aaa)) {
-                            const echo = `'${answer2}' is wrong answer ;(. Correct answer was '${eval(aaa)}'.\nLet\'s try again, ${name}!`;
-                            console.log (echo);
-                        } else {
-                            console.log('Correct!');
-                            const end = `Congratulations, ${name}!`;
-                            console.log(end);
-                        }
-                }
-    
-         }
-
-};
+          if (i === 2 && Number(answer) === eval(aaa)) {
+          console.log('Correct!');
+          const end = `Congratulations, ${name}!`;
+          console.log(end);
+        } else {
+          i += 1;
+          //console.log(i);
+          console.log('Correct!');
+          func();
+        };
+      };
+    };
+    func();    
+  };
 
 
 export const functionD = (min, max) => {
@@ -95,41 +85,30 @@ export const functionD = (min, max) => {
  
 
 export const functionC = () => {
-
-    let res = functionD();
-    const answer = readlineSync.question('Your answer: ');
-    
-        if (Number(answer) !== res) {
-            const echo = `'${answer}' is wrong answer ;(. Correct answer was '${res}'.\nLet\'s try again, ${name}!`;
-            console.log (echo);
-    
+    let i = 0;
+  
+    const func = () => {
+  
+      let aaa = functionD();
+      const answer = readlineSync.question('Your answer: ');
+        if (Number(answer) !== aaa) {
+          const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet\'s try again, ${name}!`;
+          console.log (echo);
         } else {
-            console.log('Correct!');
-            let res = functionD();
-            const answer1 = readlineSync.question('Your answer: ');
-        
-                if (Number(answer1) !== res) {
-                    const echo = `'${answer1}' is wrong answer ;(. Correct answer was '${res}'.\nLet\'s try again, ${name}!`;
-                    console.log (echo);
-    
-                } else {
-                    console.log('Correct!');
-                    let res = functionD();
-                    const answer2 = readlineSync.question('Your answer: ');
-    
-                        if (Number(answer2) !== res) {
-                            const echo = `'${answer2}' is wrong answer ;(. Correct answer was '${res}'.\nLet\'s try again, ${name}!`;
-                            console.log (echo);
-                        } else {
-                            console.log('Correct!');
-                            const end = `Congratulations, ${name}!`;
-                            console.log(end);
-                        }
-                }
-    
-         }
-
-};
+          if (i === 2 && Number(answer) === aaa) {
+          console.log('Correct!');
+          const end = `Congratulations, ${name}!`;
+          console.log(end);
+        } else {
+          i += 1;
+          //console.log(i);
+          console.log('Correct!');
+          func();
+        };
+      };
+    };
+    func();    
+  };
 
 
 
@@ -173,40 +152,30 @@ export const functionF = (min, max) => {
  
 
 export const functionE = () => {
-
-    let bbb = functionF();
-    const answer = readlineSync.question('Your answer: ');
-    
-        if (Number(answer) !== bbb) {
-            const echo = `'${answer}' is wrong answer ;(. Correct answer was '${bbb}'.\nLet\'s try again, ${name}!`;
-            console.log (echo);
-    
+    let i = 0;
+  
+    const func = () => {
+  
+      let aaa = functionF();
+      const answer = readlineSync.question('Your answer: ');
+        if (Number(answer) !== aaa) {
+          const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet\'s try again, ${name}!`;
+          console.log (echo);
         } else {
-            console.log('Correct!');
-            let bbb = functionF();
-            const answer1 = readlineSync.question('Your answer: ');
-        
-                if (Number(answer1) !== bbb) {
-                    const echo = `'${answer1}' is wrong answer ;(. Correct answer was '${bbb}'.\nLet\'s try again, ${name}!`;
-                    console.log (echo);
-    
-                } else {
-                    console.log('Correct!');
-                    let bbb = functionF();
-                    const answer2 = readlineSync.question('Your answer: ');
-    
-                        if (Number(answer2) !== bbb) {
-                            const echo = `'${answer2}' is wrong answer ;(. Correct answer was '${bbb}'.\nLet\'s try again, ${name}!`;
-                            console.log (echo);
-                        } else {
-                            console.log('Correct!');
-                            const end = `Congratulations, ${name}!`;
-                            console.log(end);
-                        }
-                }
-    
-         }
-};
+          if (i === 2 && Number(answer) === aaa) {
+          console.log('Correct!');
+          const end = `Congratulations, ${name}!`;
+          console.log(end);
+        } else {
+          i += 1;
+          //console.log(i);
+          console.log('Correct!');
+          func();
+        };
+      };
+    };
+    func();    
+  };
 
 
 export const functionG = () => {
@@ -236,37 +205,44 @@ export const functionG = () => {
 };
 
 export const functionH = () => {
-
-    let aaa = functionG();
-
-    const answer = readlineSync.question('Your answer: ');
+    let i = 0;
+  
+    const func = () => {
+  
+      let aaa = functionG();
+      const answer = readlineSync.question('Your answer: ');
         if (answer !== aaa) {
-            const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet\'s try again, ${name}!`;
-            console.log (echo);
-    
+          const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet\'s try again, ${name}!`;
+          console.log (echo);
         } else {
-            console.log('Correct!');
-            let aaa = functionG();
-            const answer1 = readlineSync.question('Yor answer: ');
-        
-                if (answer1 !== aaa) {
-                    const echo = `'${answer1}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet\'s try again, ${name}!`;
-                    console.log (echo);
+          if (i === 2 && answer === aaa) {
+          console.log('Correct!');
+          const end = `Congratulations, ${name}!`;
+          console.log(end);
+        } else {
+          i += 1;
+          //console.log(i);
+          console.log('Correct!');
+          func();
+        };
+      };
+    };
+    func();    
+  };
+
+
+
+
+export const engine = () => {
+
+    let answer = readlineSync.question('Your answer: ');
+    if (answer !== result) {
+        const echo = `'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet\'s try again, ${name}!`;
+        console.log (echo);
     
-                } else {
-                    console.log('Correct!');
-                    let aaa = functionG();
-                    const answer2 = readlineSync.question('Yor answer: ');
-    
-                        if (answer2 !== aaa) {
-                            const echo = `'${answer2}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet\'s try again, ${name}!`;
-                            console.log (echo);
-                        } else {
-                            console.log('Correct!');
-                            const end = `Congratulations, ${name}!`;
-                            console.log(end);
-                        }
-                }
-    
-         }
+    } else {
+        console.log('Correct!');
+        engine();
+    };
 };
+
