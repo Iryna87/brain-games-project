@@ -12,13 +12,8 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "main": "index.js",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "test": "npx -n --experimental-vm-modules jest",
-    "build": "NODE_ENV=production babel game --out-dir dist",
-    "prepublishOnly": "npm run build"
+    "test": "npx -n --experimental-vm-modules jest"
   },
   "repository": {
     "type": "git",
