@@ -11,15 +11,12 @@ export const greetings = () => {
 };
 
 export const functionB = () => {
-  const randomNumberRange = (min, max) => {
-    return Math.floor(Math.random() * (max - min) + min);
-  };
-
+  const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
   let a = '';
   const x = ['*', '-', '+'];
   const rundomNumber1 = randomNumberRange(1, 100);
   const rundomNumber2 = randomNumberRange(1, 100);
-  const expressionSign= randomNumberRange(0, x.length);
+  const expressionSign = randomNumberRange(0, x.length);
   const expressionSignRundom = x[expressionSign];
 
   a = `${rundomNumber1} ${expressionSignRundom} ${rundomNumber2}`;
@@ -34,7 +31,7 @@ export const functionA = () => {
     const aaa = functionB();
     const answer = readlineSync.question('Your answer: ');
     if (Number(answer) !== eval(aaa)) {
-      const echo = `'${answer}' is wrong answer ;(. Correct answer was '${eval(aaa)}'.\nLet\'s try again, ${name}!`;
+      const echo = `'${answer}' is wrong answer ;(. Correct answer was '${eval(aaa)}'.\nLet's try again, ${name}!`;
       console.log(echo);
     } else {
       if (i === 2 && Number(answer) === eval(aaa)) {
@@ -45,16 +42,14 @@ export const functionA = () => {
         i += 1;
         console.log('Correct!');
         func();
-      };
+      }
     }
   };
   func();
 };
 
-export const functionD = (min, max) => {
-  const randomNumberRange = (min, max) => {
-    return Math.floor(Math.random() * (max - min) + min);
-  };
+export const functionD = () => {
+  const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
   let a = '';
   const rundomNumber1 = randomNumberRange(1, 100);
   const rundomNumber2 = randomNumberRange(1, 100);
@@ -62,7 +57,7 @@ export const functionD = (min, max) => {
   const question = `Question: ${a}`;
   console.log(question);
   let b = [];
-  let bais = b.push(rundomNumber1, rundomNumber2);
+  const bais = b.push(rundomNumber1, rundomNumber2);
   let result = '';
   for (let i = 1; i <= 200; i += 1) {
     if (b[0] % i === 0 && b[1] % i === 0) {
@@ -78,7 +73,7 @@ export const functionC = () => {
     const aaa = functionD();
     const answer = readlineSync.question('Your answer: ');
     if (Number(answer) !== aaa) {
-      const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet\'s try again, ${name}!`;
+      const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet's try again, ${name}!`;
       console.log(echo);
     } else {
       if (i === 2 && Number(answer) === aaa) {
@@ -89,13 +84,13 @@ export const functionC = () => {
         i += 1;
         console.log('Correct!');
         func();
-      };
+      }
     }
   };
   func();
 };
 
-export const functionF = (min, max) => {
+export const functionF = () => {
   const randomNumberRange = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
   };
@@ -128,7 +123,7 @@ export const functionE = () => {
     const aaa = functionF();
     const answer = readlineSync.question('Your answer: ');
     if (Number(answer) !== aaa) {
-      const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet\'s try again, ${name}!`;
+      const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet's try again, ${name}!`;
       console.log(echo);
     } else {
       if (i === 2 && Number(answer) === aaa) {
@@ -139,7 +134,7 @@ export const functionE = () => {
         i += 1;
         console.log('Correct!');
         func();
-      };
+      }
     }
   };
   func();
@@ -151,7 +146,7 @@ export const engineBrainPrime = () => {
     const aaa = conditions.conditionBrainPrime();
     const answer = readlineSync.question('Your answer: ');
     if (answer !== aaa) {
-      const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet\'s try again, ${name}!`;
+      const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet's try again, ${name}!`;
       console.log(echo);
     } else {
       if (i === 2 && answer === aaa) {
@@ -162,7 +157,7 @@ export const engineBrainPrime = () => {
         i += 1;
         console.log('Correct!');
         func();
-      };
+      }
     }
   };
   func();

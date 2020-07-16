@@ -3,11 +3,9 @@
 import * as func from './index.js';
 
 export const conditionBrainPrime = () => {
-  const randomNumberRange = (min, max) => {
-    return Math.floor(Math.random() * (max - min) + min);
-  };
-  let randomNumber = randomNumberRange(1, 100);
-  let question = `Question: ${randomNumber}`;
+  const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
+  const randomNumber = randomNumberRange(1, 100);
+  const question = `Question: ${randomNumber}`;
   console.log(question);
   let isPrime = 0;
   for (let i = 1; i <= randomNumber; i += 1) {
