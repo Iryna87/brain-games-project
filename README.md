@@ -4,7 +4,7 @@
 
 [![Node CI](https://github.com/hexlet-boilerplates/nodejs-package/workflows/Node%20CI/badge.svg)](https://github.com/Iryna87/FrontEndProject_1/actions)
 
-[![asciicast](https://asciinema.org/a/2cHNS7LQM1WI2xqEOzMvPNqrc.svg)](https://asciinema.org/a/2cHNS7LQM1WI2xqEOzMvPNqrc)
+[![asciicast](https://asciinema.org/a/AkuRnEuTVEsuXPFHAFLVV7mcP.svg)](https://asciinema.org/a/AkuRnEuTVEsuXPFHAFLVV7mcP)
 
 [![asciicast](https://asciinema.org/a/BKW8n6Shy6tsatKw7dt91WBEs.svg)](https://asciinema.org/a/BKW8n6Shy6tsatKw7dt91WBEs)
 
