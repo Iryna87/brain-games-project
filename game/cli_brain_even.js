@@ -17,21 +17,21 @@ export const brainEven = () => {
     console.log('Correct!');
     console.log('Question: 6');
     const name2 = readlineSync.question('Your answer: ');
-      if (name2 !== 'yes') {
-        const str3 = `${name2} is wrong answer ;(. Correct answer was "yes". Let\'s try again, ${name}!`;
-        console.log(str3);
-      } else {
+    if (name2 !== 'yes') {
+      const str3 = `${name2} is wrong answer ;(. Correct answer was "yes". Let\'s try again, ${name}!`;
+      console.log(str3);
+    } else {
+      console.log('Correct!');
+      console.log('Question: 7');
+      const name3 = readlineSync.question('Your answer: ');
+        if (name3 !== 'no') {
+          const str4 = `${name3} is wrong answer ;(. Correct answer was "no". Let's try again, ${name}!`;
+          console.log(str4);
+        } else {
+          const str5 = `Congratulations, ${name}!`;
           console.log('Correct!');
-          console.log('Question: 7');
-          const name3 = readlineSync.question('Your answer: ');
-            if (name3 !== 'no') {
-               const str4 = `${name3} is wrong answer ;(. Correct answer was "no". Let's try again, ${name}!`;
-               console.log(str4);
-            } else {
-              const str5 = `Congratulations, ${name}!`;
-              console.log('Correct!');
-              console.log(str5);
-            };
-      };
-  };
+          console.log(str5);
+        }
+    }
+  }
 };

@@ -56,7 +56,7 @@ export const functionD = () => {
   a = `${rundomNumber1} ${rundomNumber2}`;
   const question = `Question: ${a}`;
   console.log(question);
-  let b = [];
+  const b = [];
   const bais = b.push(rundomNumber1, rundomNumber2);
   let result = '';
   for (let i = 1; i <= 200; i += 1) {
@@ -91,9 +91,7 @@ export const functionC = () => {
 };
 
 export const functionF = () => {
-  const randomNumberRange = (min, max) => {
-    return Math.floor(Math.random() * (max - min) + min);
-  };
+  const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
   const a = randomNumberRange(1, 11);
   const b = randomNumberRange(1, 90);
   const c = randomNumberRange(0, 10);
@@ -108,7 +106,7 @@ export const functionF = () => {
   console.log(question);
   let ccc = 0;
   if (c === 0) {
-    ccc = result[c + 1] - a; 
+    ccc = result[c + 1] - a;
   } if (c === 9) {
     ccc = result[c - 1] + a;
   } else {
