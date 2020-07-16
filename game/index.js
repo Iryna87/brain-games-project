@@ -1,10 +1,11 @@
 // give_index.js
 
 import readlineSync from 'readline-sync';
+import * as conditions from './cli_brain_prime.js';
 
 export const name = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
 
-export const nameF  = () => {
+export const greetings  = () => {
     const str = `Hello, ${name}!`;
     console.log(str);
 };
@@ -178,38 +179,13 @@ export const functionE = () => {
   };
 
 
-export const functionG = () => {
-    const randomNumberRange = (min, max) => {
-        return Math.floor(Math.random() * (max - min) + min);
-      };
-    
-    let a = randomNumberRange(1, 100);
-    let question = `Question: ${a}`;
-    console.log(question);
 
-    let res = 0;
-        for (let i = 1; i <= a; i += 1) {
-            if (a % i === 0) {
-            res += 1;
-            }
-        };
-    let result = '';
-    if (res < 3) {
-        result = 'yes';
-        } else {
-            result = 'no';
-        };
-    //console.log(res);  
-    //console.log(result); 
-    return result;    
-};
-
-export const functionH = () => {
+export const engineBrainPrime = () => {
     let i = 0;
   
     const func = () => {
   
-      let aaa = functionG();
+      let aaa = conditions.conditionBrainPrime();
       const answer = readlineSync.question('Your answer: ');
         if (answer !== aaa) {
           const echo = `'${answer}' is wrong answer ;(. Correct answer was '${aaa}'.\nLet\'s try again, ${name}!`;
