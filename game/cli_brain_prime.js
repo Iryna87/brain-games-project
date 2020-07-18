@@ -25,5 +25,5 @@ export const conditionBrainPrime = () => {
 export const brainPrime = () => {
   func.greetings();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  func.engineBrainPrime();
+  func.engine(conditionBrainPrime());
 };

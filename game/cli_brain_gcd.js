@@ -18,11 +18,11 @@ export const conditionBrainGcd = () => {
       result = i;
     }
   }
-  return Number(result);
+  return String(result);
 };
 
 export const brainGcd = () => {
   func.greetings();
   console.log('Find the greatest common divisor of given numbers.');
-  func.engineBrainGcd();
+  func.engine(conditionBrainGcd());
 };

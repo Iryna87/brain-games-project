@@ -24,11 +24,11 @@ export const conditionBrainProgression = () => {
   } else {
     result = resultExpression[randomNumber3 + 1] - randomNumber1;
   }
-  return result;
+  return String(result);
 };
 
 export const brainProgression = () => {
   func.greetings();
   console.log('What number is missing in the progression?');
-  func.engineBrainProgression();
+  func.engine(conditionBrainProgression());
 };
