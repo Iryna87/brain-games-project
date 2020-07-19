@@ -8,23 +8,23 @@ export const greetings = () => {
   console.log(str);
 };
 
-export const engine = (result) => {
+export const engine = (gameRule) => {
   let i = 0;
-  const isRight = () => {
-    console.log(result);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer !== result) {
-      const echo = `'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${name}!`;
-      console.log(echo);
-    } else if (i === 2 && answer === result) {
+  const checkIfCorrect = () => {
+    const correctAnswer = gameRule();
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer !== correctAnswer) {
+      const echoScreen = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`;
+      console.log(echoScreen);
+    } else if (i === 2 && userAnswer === correctAnswer) {
       console.log('Correct!');
-      const congratulations = `Congratulations, ${name}!`;
-      console.log(congratulations);
+      const congratulationsToScreen = `Congratulations, ${name}!`;
+      console.log(congratulationsToScreen);
     } else {
       i += 1;
       console.log('Correct!');
-      isRight();
+      checkIfCorrect();
     }
   };
-  isRight();
+  checkIfCorrect();
 };

@@ -4,12 +4,12 @@ import * as func from './index.js';
 
 export const conditionBrainGcd = () => {
   const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
-  let expression = '';
+  let resultString = '';
   const rundomNumber1 = randomNumberRange(1, 100);
   const rundomNumber2 = randomNumberRange(1, 100);
-  expression = `${rundomNumber1} ${rundomNumber2}`;
-  const question = `Question: ${expression}`;
-  console.log(question);
+  resultString = `${rundomNumber1} ${rundomNumber2}`;
+  const questionToScreen = `Question: ${resultString}`;
+  console.log(questionToScreen);
   const coll = [];
   coll.push(rundomNumber1, rundomNumber2);
   let result = '';
@@ -24,5 +24,5 @@ export const conditionBrainGcd = () => {
 export const brainGcd = () => {
   func.greetings();
   console.log('Find the greatest common divisor of given numbers.');
-  func.engine(conditionBrainGcd());
+  func.engine(conditionBrainGcd);
 };
