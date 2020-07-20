@@ -2,7 +2,6 @@
   "name": "BrainGamesProjectFrontEnd",
   "version": "1.0.0",
   "description": "my first project",
-  "lockfileVersion": "1",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
