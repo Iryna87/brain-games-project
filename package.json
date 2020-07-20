@@ -11,16 +11,15 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "main": "index.js",
   "scripts": {
-    "test": "npx -n --experimental-vm-modules jest"
+    "run": "npx eslint ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Iryna87/BrainGamesProjectFrontEnd"
   },
   "type": "module",
-  "author": "",
+  "author": "Irina Morozova",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Iryna87/BrainGamesProjectFrontEnd/issues"
@@ -32,5 +31,7 @@
     "eslint-plugin-import": "^2.22.0",
     "readline-sync": "^1.4.10"
   },
-  "dependencies": {}
+  "dependencies": {
+  "readline-sync": "^1.4.10"
+  }
 }
