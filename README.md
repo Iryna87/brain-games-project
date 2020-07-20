@@ -22,15 +22,9 @@ This is my first FrontEnd Project that contains 6 games with different difficult
 
 ```sh
 $ make brain-games
-```sh
 $ make brain-even
-```sh
 $ make brain-calc
-```sh
 $ make brain-gcd
-```sh
 $ make brain-progression
-```sh
 $ make brain-prime
-
 ```
