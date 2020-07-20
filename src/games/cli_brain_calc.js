@@ -1,6 +1,6 @@
 // give2.js
 
-import * as func from './index.js';
+import * as func from '../index.js';
 
 export const conditionBrainCalc = () => {
   const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
@@ -14,6 +14,7 @@ export const conditionBrainCalc = () => {
   resultString = `${rundomNumber1} ${expressionSignRundom} ${rundomNumber2}`;
   const questionToScreen = `Question: ${resultString}`;
   console.log(questionToScreen);
+  // eslint-disable-next-line no-eval
   const result = eval(resultString);
   return String(result);
 };

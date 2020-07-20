@@ -1,6 +1,6 @@
 // give_prime.js
 
-import * as func from './index.js';
+import * as func from '../index.js';
 
 export const conditionBrainPrime = () => {
   const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
