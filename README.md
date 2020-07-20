@@ -1,7 +1,7 @@
 # BrainGamesProjectFrontEnd
 
 ##
-This is my first FrontEnd Project that contains 6 games with different difficulty level. Hope you will have a nive time plying them:)
+This is my first FrontEnd Project that contains 6 games with different difficulty level. Hope you will have a nive time playing them:)
 ##
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/53226c39a3bf90255f0b/maintainability)](https://codeclimate.com/github/Iryna87/FrontEndProject_1/maintainability)
@@ -28,9 +28,15 @@ $ make install
 
 ```sh
 $ brain-games
+This game asks your name and returns greetings.
 $ brain-even
+This game asks if the number is even and checks your answer.
 $ brain-calc
+This game asks you to make a calculation of the expression.
 $ brain-gcd
+This game asks you for a greatest common divisor between to numbers.
 $ brain-progression
+This game asks you for a number that is missing in a progression of numbers.
 $ brain-prime
+This game asks if the number is prime and checks your answer.
 ```
