@@ -1,5 +1,5 @@
 {
-  "name": "FrontEndProject_1",
+  "name": "BrainGamesProjectFrontEnd",
   "version": "1.0.0",
   "description": "my first project",
   "lockfileVersion": "1",
@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Iryna87/FrontEndProject_1"
+    "url": "git+https://github.com/Iryna87/BrainGamesProjectFrontEnd"
   },
   "type": "module",
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Iryna87/FrontEndProject_1/issues"
+    "url": "https://github.com/Iryna87/BrainGamesProjectFrontEnd/issues"
   },
-  "homepage": "https://github.com/Iryna87/FrontEndProject_1#readme",
+  "homepage": "https://github.com/Iryna87/BrainGamesProjectFrontEnd#readme",
   "devDependencies": {
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
