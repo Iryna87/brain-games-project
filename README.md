@@ -18,13 +18,19 @@ This is my first FrontEnd Project that contains 6 games with different difficult
 
 [![asciicast](https://asciinema.org/a/dfVHDJbmU8mipcZQz5Ga4BsoC.svg)](https://asciinema.org/a/dfVHDJbmU8mipcZQz5Ga4BsoC)
 
+## Setup
+
+```sh
+$ make install
+```
+
 ## Run games
 
 ```sh
-$ make brain-games
-$ make brain-even
-$ make brain-calc
-$ make brain-gcd
-$ make brain-progression
-$ make brain-prime
+$ brain-games
+$ brain-even
+$ brain-calc
+$ brain-gcd
+$ brain-progression
+$ brain-prime
 ```
