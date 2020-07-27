@@ -1,9 +1,9 @@
 // give_prog.js
 
 import * as func from '../index.js';
+import randomNumberRange from '../utils.js';
 
 export const conditionBrainProgression = () => {
-  const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
   const randomNumber1 = randomNumberRange(1, 11);
   const randomNumber2 = randomNumberRange(1, 90);
   const randomNumber3 = randomNumberRange(0, 10);
@@ -26,9 +26,10 @@ export const conditionBrainProgression = () => {
   }
   return String(result);
 };
+export const gameQuestion = 'What number is missing in the progression?';
 
 export const brainProgression = () => {
   func.greetings();
-  console.log('What number is missing in the progression?');
+  console.log(gameQuestion);
   func.engine(conditionBrainProgression);
 };

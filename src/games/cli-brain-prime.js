@@ -1,9 +1,9 @@
 // give_prime.js
 
 import * as func from '../index.js';
+import randomNumberRange from '../utils.js';
 
 export const conditionBrainPrime = () => {
-  const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
   const randomNumber = randomNumberRange(1, 100);
   const questionToScreen = `Question: ${randomNumber}`;
   console.log(questionToScreen);
@@ -21,9 +21,10 @@ export const conditionBrainPrime = () => {
   }
   return result;
 };
+export const gameQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export const brainPrime = () => {
   func.greetings();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  console.log(gameQuestion);
   func.engine(conditionBrainPrime);
 };

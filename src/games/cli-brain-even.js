@@ -1,9 +1,9 @@
 // give1.js
 
 import * as func from '../index.js';
+import randomNumberRange from '../utils.js';
 
 export const conditionBrainEven = () => {
-  const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
   const rundomNumber = randomNumberRange(1, 100);
   const questionToScreen = `Question: ${rundomNumber}`;
   console.log(questionToScreen);
@@ -15,9 +15,10 @@ export const conditionBrainEven = () => {
   }
   return result;
 };
+export const gameQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 export const brainEven = () => {
   func.greetings();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log(gameQuestion);
   func.engine(conditionBrainEven);
 };

@@ -1,9 +1,9 @@
 // give2.js
 
 import * as func from '../index.js';
+import randomNumberRange from '../utils.js';
 
 export const conditionBrainCalc = () => {
-  const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
   let resultString = '';
   const x = ['*', '-', '+'];
   const rundomNumber1 = randomNumberRange(1, 100);
@@ -32,8 +32,10 @@ export const conditionBrainCalc = () => {
   return String(result);
 };
 
+export const gameQuestion = 'What is the result of the expression?';
+
 export const brainCalc = () => {
   func.greetings();
-  console.log('What is the result of the expression?');
+  console.log(gameQuestion);
   func.engine(conditionBrainCalc);
 };

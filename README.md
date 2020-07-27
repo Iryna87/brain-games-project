@@ -22,6 +22,7 @@ This is my first FrontEnd Project that contains 6 games with different difficult
 
 ```sh
 $ make install
+$ npm link
 ```
 
 ## Run games

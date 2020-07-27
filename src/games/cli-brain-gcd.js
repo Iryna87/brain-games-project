@@ -1,9 +1,9 @@
 // give2.js
 
 import * as func from '../index.js';
+import randomNumberRange from '../utils.js';
 
 export const conditionBrainGcd = () => {
-  const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
   let resultString = '';
   const rundomNumber1 = randomNumberRange(1, 100);
   const rundomNumber2 = randomNumberRange(1, 100);
@@ -20,9 +20,10 @@ export const conditionBrainGcd = () => {
   }
   return String(result);
 };
+export const gameQuestion = 'Find the greatest common divisor of given numbers.';
 
 export const brainGcd = () => {
   func.greetings();
-  console.log('Find the greatest common divisor of given numbers.');
+  console.log(gameQuestion);
   func.engine(conditionBrainGcd);
 };
