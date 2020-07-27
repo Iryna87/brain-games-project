@@ -1,5 +1,5 @@
 {
-  "name": "BrainGamesProjectFrontEnd",
+  "name": "brain-games-project",
   "version": "1.0.0",
   "description": "my first project",
   "bin": {
@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Iryna87/BrainGamesProjectFrontEnd"
+    "url": "git+https://github.com/Iryna87/brain-games-project"
   },
   "type": "module",
   "author": "Irina Morozova",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Iryna87/BrainGamesProjectFrontEnd/issues"
+    "url": "https://github.com/Iryna87/brain-games-project/issues"
   },
-  "homepage": "https://github.com/Iryna87/BrainGamesProjectFrontEnd#readme",
+  "homepage": "https://github.com/Iryna87/brain-games-project#readme",
   "devDependencies": {
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
