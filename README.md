@@ -1,4 +1,4 @@
-# BrainGamesProjectFrontEnd
+# brain-games-project
 
 ##
 This is my first FrontEnd Project that contains 6 games with different difficulty level. Hope you will have a nive time playing them:)
