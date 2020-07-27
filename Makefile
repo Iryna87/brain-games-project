@@ -1,6 +1,6 @@
-install: install-deps
+install: install - deps
 	
-install-deps:
+install - deps:
 	npm ci
 	
 brain-games:

@@ -11,7 +11,7 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "scripts": {
-    "run": "npx eslint ."
+    "lint": "npx eslint ."
   },
   "repository": {
     "type": "git",

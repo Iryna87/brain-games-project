@@ -14,8 +14,21 @@ export const conditionBrainCalc = () => {
   resultString = `${rundomNumber1} ${expressionSignRundom} ${rundomNumber2}`;
   const questionToScreen = `Question: ${resultString}`;
   console.log(questionToScreen);
-  // eslint-disable-next-line no-eval
-  const result = eval(resultString);
+  let result = 0;
+  const arr = resultString.split(' ');
+  switch (arr[1]) {
+    case '+':
+      result = Math.round((+arr[0] + +arr[2]) * 100) / 100;
+      break;
+    case '-':
+      result = Math.round((+arr[0] - +arr[2]) * 100) / 100;
+      break;
+    case '*':
+      result = Math.round((+arr[0] * +arr[2]) * 100) / 100;
+      break;
+    default:
+      break;
+  }
   return String(result);
 };
 
