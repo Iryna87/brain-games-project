@@ -1,5 +1,5 @@
 // utils.js
 
-const randomNumberRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
+const findRundomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-export default randomNumberRange;
+export default findRundomNumber;

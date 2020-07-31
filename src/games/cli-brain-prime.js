@@ -1,30 +1,29 @@
-// give_prime.js
+// brain-prime.js
 
-import * as func from '../index.js';
-import randomNumberRange from '../utils.js';
+import runEngine from '../index.js';
+import findRundomNumber from '../utils.js';
 
-export const conditionBrainPrime = () => {
-  const randomNumber = randomNumberRange(1, 100);
-  const questionToScreen = `Question: ${randomNumber}`;
-  console.log(questionToScreen);
-  let chechIfPrime = 0;
-  for (let i = 1; i <= randomNumber; i += 1) {
-    if (randomNumber % i === 0) {
-      chechIfPrime += 1;
+const build = () => {
+  const numberIfPrime = findRundomNumber(1, 100);
+  const question = numberIfPrime;
+  let correctAnswer = '';
+  let divisorsCount = 0;
+  for (let i = 1; i <= numberIfPrime; i += 1) {
+    if (numberIfPrime % i === 0) {
+      divisorsCount += 1;
     }
   }
-  let result = '';
-  if (chechIfPrime < 3) {
-    result = 'yes';
+  if (divisorsCount < 3) {
+    correctAnswer = 'yes';
   } else {
-    result = 'no';
+    correctAnswer = 'no';
   }
+  const result = [correctAnswer, question];
   return result;
 };
-export const gameQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export const brainPrime = () => {
-  func.greetings();
-  console.log(gameQuestion);
-  func.engine(conditionBrainPrime);
+const playBrainPrime = () => {
+  runEngine(build, task);
 };
+export default playBrainPrime;

@@ -1,24 +1,23 @@
-// give1.js
+// brain-even.js
 
-import * as func from '../index.js';
-import randomNumberRange from '../utils.js';
+import runEngine from '../index.js';
+import findRundomNumber from '../utils.js';
 
-export const conditionBrainEven = () => {
-  const rundomNumber = randomNumberRange(1, 100);
-  const questionToScreen = `Question: ${rundomNumber}`;
-  console.log(questionToScreen);
-  let result = '';
-  if (rundomNumber % 2 === 0) {
-    result = 'yes';
+const build = () => {
+  const numberIfEven = findRundomNumber(1, 100);
+  const question = numberIfEven;
+  let correctAnswer = '';
+  if (numberIfEven % 2 === 0) {
+    correctAnswer = 'yes';
   } else {
-    result = 'no';
+    correctAnswer = 'no';
   }
+  const result = [correctAnswer, question];
   return result;
 };
-export const gameQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
+const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-export const brainEven = () => {
-  func.greetings();
-  console.log(gameQuestion);
-  func.engine(conditionBrainEven);
+const playBrainEven = () => {
+  runEngine(build, task);
 };
+export default playBrainEven;
