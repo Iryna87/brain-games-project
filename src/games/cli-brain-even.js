@@ -3,18 +3,18 @@
 import runEngine from '../index.js';
 import findRundomNumber from '../utils.js';
 
-const build = () => {
-  const numberIfEven = findRundomNumber(1, 100);
-  const question = numberIfEven;
-  let correctAnswer = '';
-  if (numberIfEven % 2 === 0) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
+const findEven = (question) => {
+  if (question % 2 === 0) {
+    return 'yes';
   }
-  const result = [correctAnswer, question];
-  return result;
+  return 'no';
 };
+
+const build = () => {
+  const question = findRundomNumber(1, 100);
+  return [findEven(question), question];
+};
+
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const playBrainEven = () => {
