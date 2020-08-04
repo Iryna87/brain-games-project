@@ -3,15 +3,7 @@
 import runEngine from '../index.js';
 import findRundomNumber from '../utils.js';
 
-const findProgression = (progressionBuild, hiddenNumber, progressionStep) => {
-  let correctAnswer = 0;
-  if (hiddenNumber === 9) {
-    correctAnswer = progressionBuild[hiddenNumber - 1] + progressionStep;
-  } else {
-    correctAnswer = progressionBuild[hiddenNumber + 1] - progressionStep;
-  }
-  return correctAnswer;
-};
+const findProgression = (progressionBuild, hiddenNumber) => progressionBuild[hiddenNumber];
 
 const build = () => {
   const progressionStep = findRundomNumber(1, 11);
@@ -21,9 +13,10 @@ const build = () => {
   for (let i = 1; i < 10; i += 1) {
     progressionBuild[i] = progressionBuild[i - 1] + progressionStep;
   }
+  const result = findProgression(progressionBuild, hiddenNumber);
   progressionBuild.splice(hiddenNumber, 1, '..');
   const question = progressionBuild.join(' ');
-  return [String(findProgression(progressionBuild, hiddenNumber, progressionStep)), question];
+  return [String(result), question];
 };
 
 const task = 'What number is missing in the progression?';

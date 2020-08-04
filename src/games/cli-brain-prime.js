@@ -5,12 +5,12 @@ import findRundomNumber from '../utils.js';
 
 const findPrime = (question) => {
   let corectAnswer = 0;
-  for (let i = 2; i <= question; i += 1) {
+  for (let i = 2; i <= (question / 2); i += 1) {
     if (question % i === 0) {
       corectAnswer += 1;
     }
   }
-  if (corectAnswer > 2) return 'no';
+  if (corectAnswer > 1) return 'no';
   return 'yes';
 };
 
