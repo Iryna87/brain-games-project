@@ -4,19 +4,21 @@ import runEngine from '../index.js';
 import findRundomNumber from '../utils.js';
 
 const findPrime = (question) => {
-  let corectAnswer = 0;
-  for (let i = 2; i <= (question / 2); i += 1) {
+  if (question < 2) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(question); i += 1) {
     if (question % i === 0) {
-      corectAnswer += 1;
+      return false;
     }
   }
-  if (corectAnswer > 1) return 'no';
-  return 'yes';
+  return true;
 };
 
 const build = () => {
   const question = findRundomNumber(1, 100);
-  return [findPrime(question), question];
+  const result = findPrime(question) ? 'yes' : 'no';
+  return [result, question];
 };
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
