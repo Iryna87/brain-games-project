@@ -1,39 +1,35 @@
 // brain-calc.js
 
-import runEngine from '../index.js';
-import findRundomNumber from '../utils.js';
+import getAnswer from '../index.js';
+import getRundomNumber from '../utils.js';
 
-const findCalc = (firstNumber, secondNumber, sign) => {
-  let correctAnswer = 0;
+const getCalcResult = (firstNumber, secondNumber, sign) => {
   switch (sign) {
     case '+':
-      correctAnswer = (firstNumber + secondNumber);
-      break;
+      return (firstNumber + secondNumber);
     case '-':
-      correctAnswer = (firstNumber - secondNumber);
-      break;
+      return (firstNumber - secondNumber);
     case '*':
-      correctAnswer = (firstNumber * secondNumber);
-      break;
+      return (firstNumber * secondNumber);
     default:
-      break;
+      return '';
   }
-  return correctAnswer;
 };
 
-const build = () => {
-  const firstNumber = findRundomNumber(1, 100);
-  const secondNumber = findRundomNumber(1, 100);
-  const signChoise = ['*', '-', '+'];
-  const signNumber = findRundomNumber(0, signChoise.length);
-  const sign = signChoise[signNumber];
+const buildGame = () => {
+  const firstNumber = getRundomNumber(1, 100);
+  const secondNumber = getRundomNumber(1, 100);
+  const signs = ['*', '-', '+'];
+  const signIndex = getRundomNumber(0, signs.length);
+  const sign = signs[signIndex];
   const question = `${firstNumber} ${sign} ${secondNumber}`;
-  return [String(findCalc(firstNumber, secondNumber, sign)), question];
+  const result = getCalcResult(firstNumber, secondNumber, sign);
+  return [String(result), question];
 };
 
-const task = 'What is the result of the expression?';
+const text = 'What is the result of the expression?';
 
 const playBrainCalc = () => {
-  runEngine(build, task);
+  getAnswer(buildGame, text);
 };
 export default playBrainCalc;

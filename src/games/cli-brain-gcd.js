@@ -1,25 +1,26 @@
 // brain-gcd.js
 
-import runEngine from '../index.js';
-import findRundomNumber from '../utils.js';
+import getAnswer from '../index.js';
+import getRundomNumber from '../utils.js';
 
-const findBiggestDivisor = (firstNumber, secondNumber) => {
+const getBiggestDivisor = (firstNumber, secondNumber) => {
   if (!secondNumber) {
     return firstNumber;
   }
-  return findBiggestDivisor(secondNumber, firstNumber % secondNumber);
+  return getBiggestDivisor(secondNumber, firstNumber % secondNumber);
 };
 
-const build = () => {
-  const firstNumber = findRundomNumber(1, 100);
-  const secondNumber = findRundomNumber(1, 100);
+const buildGame = () => {
+  const firstNumber = getRundomNumber(1, 100);
+  const secondNumber = getRundomNumber(1, 100);
   const question = `${firstNumber} ${secondNumber}`;
-  return [String(findBiggestDivisor(firstNumber, secondNumber)), question];
+  const result = getBiggestDivisor(firstNumber, secondNumber);
+  return [String(result), question];
 };
 
-const task = 'Find the greatest common divisor of given numbers.';
+const text = 'Find the greatest common divisor of given numbers.';
 
 const playBrainGcd = () => {
-  runEngine(build, task);
+  getAnswer(buildGame, text);
 };
 export default playBrainGcd;

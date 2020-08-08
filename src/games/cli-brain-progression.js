@@ -1,27 +1,31 @@
 // brain-progresion.js
 
-import runEngine from '../index.js';
-import findRundomNumber from '../utils.js';
+import getAnswer from '../index.js';
+import getRundomNumber from '../utils.js';
 
-const findProgression = (progressionBuild, hiddenNumber) => progressionBuild[hiddenNumber];
-
-const build = () => {
-  const progressionStep = findRundomNumber(1, 11);
-  const progressionStart = findRundomNumber(1, 90);
-  const hiddenNumber = findRundomNumber(0, 10);
-  const progressionBuild = [progressionStart + progressionStep];
-  for (let i = 1; i < 10; i += 1) {
-    progressionBuild[i] = progressionBuild[i - 1] + progressionStep;
+const generateProgression = (progressionStart, progressionStep) => {
+  const progressions = [progressionStart];
+  const stepCount = 10;
+  for (let i = 1; i < stepCount; i += 1) {
+    progressions[i] = progressions[i - 1] + progressionStep;
   }
-  const result = findProgression(progressionBuild, hiddenNumber);
-  progressionBuild.splice(hiddenNumber, 1, '..');
-  const question = progressionBuild.join(' ');
+  return progressions;
+};
+
+const buildGame = () => {
+  const progressionStep = getRundomNumber(1, 11);
+  const progressionStart = getRundomNumber(1, 90);
+  const hiddenNumberIndex = getRundomNumber(0, 10);
+  const items = generateProgression(progressionStart, progressionStep);
+  const result = items[hiddenNumberIndex];
+  items.splice(hiddenNumberIndex, 1, '..');
+  const question = items.join(' ');
   return [String(result), question];
 };
 
-const task = 'What number is missing in the progression?';
+const text = 'What number is missing in the progression?';
 
 const playBrainProgression = () => {
-  runEngine(build, task);
+  getAnswer(buildGame, text);
 };
 export default playBrainProgression;

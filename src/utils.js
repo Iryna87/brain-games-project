@@ -1,5 +1,5 @@
 // utils.js
 
-const findRundomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
+const getRundomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-export default findRundomNumber;
+export default getRundomNumber;
