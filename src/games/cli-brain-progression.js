@@ -5,9 +5,9 @@ import getRundomNumber from '../utils.js';
 
 const generateProgression = (progressionStart, progressionStep) => {
   const progressions = [progressionStart];
-  const stepCount = 10;
-  for (let i = 1; i < stepCount; i += 1) {
-    progressions[i] = progressions[i - 1] + progressionStep;
+  const stepsCount = 10;
+  for (let i = 1; i < stepsCount; i += 1) {
+    progressions.push(progressionStart + (i * progressionStep));
   }
   return progressions;
 };

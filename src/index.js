@@ -7,8 +7,7 @@ const getAnswer = (buildGame, text) => {
   let questionCount = 1;
   const roundsCount = 3;
   const checkAnswer = () => {
-    const gameConditions = buildGame();
-    const [correctAnswer, question] = gameConditions;
+    const [correctAnswer, question] = buildGame();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (questionCount === roundsCount) {
