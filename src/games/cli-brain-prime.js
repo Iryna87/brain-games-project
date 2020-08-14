@@ -1,6 +1,6 @@
 // brain-prime.js
 
-import getAnswer from '../index.js';
+import runGame from '../index.js';
 import getRundomNumber from '../utils.js';
 
 const isNumberPrime = (question) => {
@@ -21,9 +21,9 @@ const buildGame = () => {
   return [result, question];
 };
 
-const text = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const playBrainPrime = () => {
-  getAnswer(buildGame, text);
+  runGame(buildGame, description);
 };
 export default playBrainPrime;

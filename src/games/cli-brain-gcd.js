@@ -1,6 +1,6 @@
 // brain-gcd.js
 
-import getAnswer from '../index.js';
+import runGame from '../index.js';
 import getRundomNumber from '../utils.js';
 
 const getBiggestDivisor = (firstNumber, secondNumber) => {
@@ -18,9 +18,9 @@ const buildGame = () => {
   return [String(result), question];
 };
 
-const text = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const playBrainGcd = () => {
-  getAnswer(buildGame, text);
+  runGame(buildGame, description);
 };
 export default playBrainGcd;

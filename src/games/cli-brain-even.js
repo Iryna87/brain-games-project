@@ -1,23 +1,24 @@
 // brain-even.js
 
-import getAnswer from '../index.js';
+import runGame from '../index.js';
 import getRundomNumber from '../utils.js';
 
 const isNumberEven = (question) => {
   if (question % 2 === 0) {
-    return 'yes';
+    return true;
   }
-  return 'no';
+  return false;
 };
 
 const buildGame = () => {
   const question = getRundomNumber(1, 100);
-  return [isNumberEven(question), question];
+  const result = isNumberEven(question) ? 'yes' : 'no';
+  return [result, question];
 };
 
-const text = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const playBrainEven = () => {
-  getAnswer(buildGame, text);
+  runGame(buildGame, description);
 };
 export default playBrainEven;

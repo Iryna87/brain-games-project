@@ -1,15 +1,15 @@
 // brain-progresion.js
 
-import getAnswer from '../index.js';
+import runGame from '../index.js';
 import getRundomNumber from '../utils.js';
 
 const generateProgression = (progressionStart, progressionStep) => {
-  const progressions = [progressionStart];
+  const progression = [];
   const stepsCount = 10;
-  for (let i = 1; i < stepsCount; i += 1) {
-    progressions.push(progressionStart + (i * progressionStep));
+  for (let i = 0; i < stepsCount; i += 1) {
+    progression.push(progressionStart + (i * progressionStep));
   }
-  return progressions;
+  return progression;
 };
 
 const buildGame = () => {
@@ -23,9 +23,9 @@ const buildGame = () => {
   return [String(result), question];
 };
 
-const text = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const playBrainProgression = () => {
-  getAnswer(buildGame, text);
+  runGame(buildGame, description);
 };
 export default playBrainProgression;

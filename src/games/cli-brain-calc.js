@@ -1,6 +1,6 @@
 // brain-calc.js
 
-import getAnswer from '../index.js';
+import runGame from '../index.js';
 import getRundomNumber from '../utils.js';
 
 const getCalcResult = (firstNumber, secondNumber, sign) => {
@@ -12,7 +12,7 @@ const getCalcResult = (firstNumber, secondNumber, sign) => {
     case '*':
       return (firstNumber * secondNumber);
     default:
-      return '';
+      return null;
   }
 };
 
@@ -27,9 +27,9 @@ const buildGame = () => {
   return [String(result), question];
 };
 
-const text = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const playBrainCalc = () => {
-  getAnswer(buildGame, text);
+  runGame(buildGame, description);
 };
 export default playBrainCalc;
