@@ -1,14 +1,7 @@
-// brain-even.js
-
 import runGame from '../index.js';
 import getRundomNumber from '../utils.js';
 
-const isNumberEven = (question) => {
-  if (question % 2 === 0) {
-    return true;
-  }
-  return false;
-};
+const isNumberEven = (question) => question % 2 === 0;
 
 const buildGame = () => {
   const question = getRundomNumber(1, 100);

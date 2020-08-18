@@ -1,5 +1,3 @@
-// brain-progresion.js
-
 import runGame from '../index.js';
 import getRundomNumber from '../utils.js';
 
@@ -16,10 +14,10 @@ const buildGame = () => {
   const progressionStep = getRundomNumber(1, 11);
   const progressionStart = getRundomNumber(1, 90);
   const hiddenNumberIndex = getRundomNumber(0, 10);
-  const items = generateProgression(progressionStart, progressionStep);
-  const result = items[hiddenNumberIndex];
-  items.splice(hiddenNumberIndex, 1, '..');
-  const question = items.join(' ');
+  const progression = generateProgression(progressionStart, progressionStep);
+  const result = progression[hiddenNumberIndex];
+  progression.splice(hiddenNumberIndex, 1, '..');
+  const question = progression.join(' ');
   return [String(result), question];
 };
 

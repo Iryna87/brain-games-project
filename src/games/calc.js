@@ -1,5 +1,3 @@
-// brain-calc.js
-
 import runGame from '../index.js';
 import getRundomNumber from '../utils.js';
 
